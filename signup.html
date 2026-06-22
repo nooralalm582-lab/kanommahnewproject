@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إنشاء حساب جديد | كن أمة</title>
+<meta name="description" content="أنشئ حسابك في منصة كن أمة وابدأ رحلتك في إتقان تلاوة القرآن الكريم.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#signupForm" class="skip-link">تخطَّ إلى نموذج إنشاء الحساب</a>
+
+<div class="login-page">
+  <div class="login-wrap">
+
+    <a href="index.html" class="login-back"><img src="Logo.png">
+      
+    </a>
+
+    <div class="login-card">
+      <h2>إنشاء حساب جديد</h2>
+      <p class="login-sub">انضمّ إلينا اليوم وابدأ رحلتك نحو إتقان تلاوة القرآن الكريم</p>
+
+      <form id="signupForm" novalidate>
+
+        <div class="field" id="nameField">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" stroke-linecap="round"/>
+          </svg>
+          <label for="fullName" class="visually-hidden">الاسم الكامل</label>
+          <input type="text" id="fullName" name="fullName" placeholder="الاسم الكامل" autocomplete="name" required>
+        </div>
+        <p class="field-error" id="nameError"></p>
+
+        <div class="field" id="signupEmailField">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M3 6h18v12H3z" stroke-linejoin="round"/>
+            <path d="M3 7l9 7 9-7" stroke-linejoin="round"/>
+          </svg>
+          <label for="signupEmail" class="visually-hidden">البريد الإلكتروني</label>
+          <input type="email" id="signupEmail" name="email" placeholder="البريد الإلكتروني" autocomplete="email" required>
+        </div>
+        <p class="field-error" id="signupEmailError"></p>
+
+        <div class="field" id="phoneField">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v3a2 2 0 0 1-2 2c-7.7 0-14-6.3-14-14a2 2 0 0 1 2-2z" stroke-linejoin="round"/>
+          </svg>
+          <label for="phone" class="visually-hidden">رقم الجوال</label>
+          <input type="tel" id="phone" name="phone" placeholder="رقم الجوال (اختياري)" autocomplete="tel">
+        </div>
+
+        <div class="field" id="signupPasswordField">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="5" y="11" width="14" height="9" rx="2"/>
+            <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+          </svg>
+          <label for="signupPassword" class="visually-hidden">كلمة المرور</label>
+          <input type="password" id="signupPassword" name="password" placeholder="كلمة المرور" autocomplete="new-password" required minlength="6">
+          <button type="button" class="field-toggle" id="toggleSignupPassword" aria-label="إظهار كلمة المرور" aria-pressed="false">
+            <i class="fa-solid fa-eye" id="toggleSignupIcon"></i>
+          </button>
+        </div>
+        <p class="field-error" id="signupPasswordError"></p>
+
+        <div class="field" id="confirmField">
+          <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="5" y="11" width="14" height="9" rx="2"/>
+            <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+          </svg>
+          <label for="confirmPassword" class="visually-hidden">تأكيد كلمة المرور</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="تأكيد كلمة المرور" autocomplete="new-password" required minlength="6">
+          <button type="button" class="field-toggle" id="toggleConfirmPassword" aria-label="إظهار كلمة المرور" aria-pressed="false">
+            <i class="fa-solid fa-eye" id="toggleConfirmIcon"></i>
+          </button>
+        </div>
+        <p class="field-error" id="confirmError"></p>
+
+        <div class="login-meta signup-terms">
+          <label><input type="checkbox" name="terms" id="terms" required> أوافق على <a href="#terms">الشروط والأحكام</a></label>
+        </div>
+        <p class="field-error" id="termsError"></p>
+
+        <button type="submit" class="btn-login">إنشاء الحساب</button>
+      </form>
+
+      <p class="login-signup">لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
