@@ -214,7 +214,7 @@ if (loginForm) {
     if (email === savedEmail && password === savedPassword) {
       alert("تم تسجيل الدخول بنجاح");
 
-      window.location.href = "groups.html";
+      window.location.href = "--groups.html";
     } else {
       alert("البريد الإلكتروني أو كلمة المرور غير صحيحة");
     }
